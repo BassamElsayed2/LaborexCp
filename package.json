@@ -34,6 +34,7 @@
     "swiper": "^11.2.6",
     "tailwind-scrollbar": "^4.0.2",
     "uuid": "^11.1.0",
+    "xlsx": "^0.18.5",
     "zod": "^3.25.28"
   },
   "devDependencies": {
