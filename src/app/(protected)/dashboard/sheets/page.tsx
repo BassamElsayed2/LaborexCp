@@ -165,15 +165,15 @@ export default function ExcelFilesList() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-[#0c1427] dark:to-[#1a223a] py-8 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
+        <div className="bg-white dark:bg-[#101a33] rounded-2xl shadow-xl p-8 mb-8">
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center space-x-4 space-x-reverse">
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center ml-5">
+              <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center ml-5">
                 <svg
-                  className="w-6 h-6 text-blue-600"
+                  className="w-6 h-6 text-blue-600 dark:text-blue-300"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -187,17 +187,17 @@ export default function ExcelFilesList() {
                 </svg>
               </div>
               <div>
-                <h1 className="text-3xl font-bold text-gray-800">
+                <h1 className="text-3xl font-bold text-gray-800 dark:text-white">
                   ملفات Excel
                 </h1>
-                <p className="text-gray-600 mt-1">
+                <p className="text-gray-600 dark:text-gray-300 mt-1">
                   إدارة وعرض ملفات الإكسل المرفوعة
                 </p>
               </div>
             </div>
             <a
               href="/dashboard/sheets/uploadSheets/"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-xl shadow-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-xl shadow-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 dark:from-blue-800 dark:to-indigo-900 dark:hover:from-blue-900 dark:hover:to-indigo-950"
             >
               <svg
                 className="w-5 h-5 ml-2"
@@ -218,17 +218,19 @@ export default function ExcelFilesList() {
 
           {/* Stats Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
+            <div className="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-950 rounded-xl p-6 border border-blue-200 dark:border-blue-900">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-blue-600 font-medium">إجمالي الملفات</p>
-                  <p className="text-2xl font-bold text-blue-800">
+                  <p className="text-blue-600 dark:text-blue-300 font-medium">
+                    إجمالي الملفات
+                  </p>
+                  <p className="text-2xl font-bold text-blue-800 dark:text-blue-200">
                     {files.length}
                   </p>
                 </div>
-                <div className="w-12 h-12 bg-blue-200 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-blue-200 dark:bg-blue-800 rounded-lg flex items-center justify-center">
                   <svg
-                    className="w-6 h-6 text-blue-600"
+                    className="w-6 h-6 text-blue-600 dark:text-blue-300"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -244,19 +246,19 @@ export default function ExcelFilesList() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-xl p-6 border border-green-200">
+            <div className="bg-gradient-to-r from-green-50 to-green-100 dark:from-green-900 dark:to-green-950 rounded-xl p-6 border border-green-200 dark:border-green-900">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-green-600 font-medium">
+                  <p className="text-green-600 dark:text-green-300 font-medium">
                     ملفات قابلة للعرض
                   </p>
-                  <p className="text-2xl font-bold text-green-800">
+                  <p className="text-2xl font-bold text-green-800 dark:text-green-200">
                     {files.length}
                   </p>
                 </div>
-                <div className="w-12 h-12 bg-green-200 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-green-200 dark:bg-green-800 rounded-lg flex items-center justify-center">
                   <svg
-                    className="w-6 h-6 text-green-600"
+                    className="w-6 h-6 text-green-600 dark:text-green-300"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -278,15 +280,19 @@ export default function ExcelFilesList() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-purple-50 to-purple-100 rounded-xl p-6 border border-purple-200">
+            <div className="bg-gradient-to-r from-purple-50 to-purple-100 dark:from-purple-900 dark:to-purple-950 rounded-xl p-6 border border-purple-200 dark:border-purple-900">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-purple-600 font-medium">آخر تحديث</p>
-                  <p className="text-lg font-bold text-purple-800">الآن</p>
+                  <p className="text-purple-600 dark:text-purple-300 font-medium">
+                    آخر تحديث
+                  </p>
+                  <p className="text-lg font-bold text-purple-800 dark:text-purple-200">
+                    الآن
+                  </p>
                 </div>
-                <div className="w-12 h-12 bg-purple-200 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-purple-200 dark:bg-purple-800 rounded-lg flex items-center justify-center">
                   <svg
-                    className="w-6 h-6 text-purple-600"
+                    className="w-6 h-6 text-purple-600 dark:text-purple-300"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -305,7 +311,7 @@ export default function ExcelFilesList() {
         </div>
 
         {/* Files List */}
-        <div className="bg-white rounded-2xl shadow-xl p-8">
+        <div className="bg-white dark:bg-[#101a33] rounded-2xl shadow-xl p-8">
           {/* Search Bar */}
           <div className="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <h2 className="text-xl font-bold text-gray-800">قائمة الملفات</h2>
@@ -317,7 +323,7 @@ export default function ExcelFilesList() {
                 setCurrentPage(1);
               }}
               placeholder="بحث باسم الملف..."
-              className="w-full sm:w-64 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 text-right"
+              className="w-full sm:w-64 px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 dark:bg-[#0c1427] dark:text-white text-right"
             />
           </div>
           <div className="flex items-center justify-between mb-6">
@@ -349,9 +355,9 @@ export default function ExcelFilesList() {
 
           {!loading && filteredFiles.length === 0 && (
             <div className="text-center py-12">
-              <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-24 h-24 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg
-                  className="w-12 h-12 text-gray-400"
+                  className="w-12 h-12 text-gray-400 dark:text-gray-500"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -364,10 +370,10 @@ export default function ExcelFilesList() {
                   />
                 </svg>
               </div>
-              <h3 className="text-lg font-medium text-gray-900 mb-2">
+              <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
                 لا توجد نتائج مطابقة
               </h3>
-              <p className="text-gray-500 mb-6">
+              <p className="text-gray-500 dark:text-gray-300 mb-6">
                 جرب البحث باسم مختلف أو رفع ملف جديد
               </p>
             </div>
@@ -378,13 +384,13 @@ export default function ExcelFilesList() {
               {paginatedFiles.map((file) => (
                 <div
                   key={file.name}
-                  className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-blue-300 transition-all duration-300 hover:shadow-md"
+                  className="bg-gray-50 dark:bg-[#18213a] rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-400 transition-all duration-300 hover:shadow-md"
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4 space-x-reverse">
-                      <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center ml-5">
+                      <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center ml-5">
                         <svg
-                          className="w-6 h-6 text-blue-600"
+                          className="w-6 h-6 text-blue-600 dark:text-blue-300"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -398,15 +404,18 @@ export default function ExcelFilesList() {
                         </svg>
                       </div>
                       <div>
-                        <h4 className="font-semibold mb-0 text-gray-800">
+                        <h4 className="font-semibold text-gray-800 dark:text-white">
                           {file.name.split("_").slice(1).join("_")}
                         </h4>
+                        <p className="text-sm text-gray-500 dark:text-gray-300">
+                          ملف إكسل
+                        </p>
                       </div>
                     </div>
                     <div className="flex items-center space-x-3 space-x-reverse ">
                       <button
                         onClick={() => handlePreview(file.url, file.name)}
-                        className="inline-flex items-center ml-5 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                        className="inline-flex items-center ml-5 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 dark:bg-blue-800 dark:hover:bg-blue-900 transition-colors"
                       >
                         <svg
                           className="w-4 h-4 ml-2"
@@ -431,7 +440,7 @@ export default function ExcelFilesList() {
                       </button>
                       <button
                         onClick={() => handleDownload(file.url, file.name)}
-                        className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors ml-5"
+                        className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 dark:bg-green-800 dark:hover:bg-green-900 transition-colors ml-5"
                       >
                         <svg
                           className="w-4 h-4 ml-2"
@@ -450,7 +459,7 @@ export default function ExcelFilesList() {
                       </button>
                       <button
                         onClick={() => handleShare(file.url)}
-                        className="inline-flex items-center px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition-colors ml-5"
+                        className="inline-flex items-center px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 dark:bg-yellow-700 dark:hover:bg-yellow-800 transition-colors ml-5"
                       >
                         <svg
                           className="w-4 h-4 ml-2"
@@ -475,7 +484,7 @@ export default function ExcelFilesList() {
                       </button>
                       <button
                         onClick={() => handleDelete(file.name)}
-                        className="inline-flex items-center px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+                        className="inline-flex items-center px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 dark:bg-red-800 dark:hover:bg-red-900 transition-colors"
                       >
                         <svg
                           className="w-4 h-4 ml-2"
@@ -504,13 +513,13 @@ export default function ExcelFilesList() {
                     disabled={currentPage === 1}
                     className={`px-4 py-2 rounded-lg border font-medium transition-colors ${
                       currentPage === 1
-                        ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                        : "bg-white text-blue-600 border-blue-300 hover:bg-blue-50"
+                        ? "bg-gray-200 dark:bg-gray-800 text-gray-400 cursor-not-allowed"
+                        : "bg-white dark:bg-[#18213a] text-blue-600 dark:text-blue-300 border-blue-300 dark:border-blue-700 hover:bg-blue-50 dark:hover:bg-blue-900"
                     }`}
                   >
                     السابق
                   </button>
-                  <span className="mx-2 text-gray-700">
+                  <span className="mx-2 text-gray-700 dark:text-gray-200">
                     صفحة {currentPage} من {totalPages}
                   </span>
                   <button
@@ -520,8 +529,8 @@ export default function ExcelFilesList() {
                     disabled={currentPage === totalPages}
                     className={`px-4 py-2 rounded-lg border font-medium transition-colors ${
                       currentPage === totalPages
-                        ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                        : "bg-white text-blue-600 border-blue-300 hover:bg-blue-50"
+                        ? "bg-gray-200 dark:bg-gray-800 text-gray-400 cursor-not-allowed"
+                        : "bg-white dark:bg-[#18213a] text-blue-600 dark:text-blue-300 border-blue-300 dark:border-blue-700 hover:bg-blue-50 dark:hover:bg-blue-900"
                     }`}
                   >
                     التالي
@@ -536,13 +545,13 @@ export default function ExcelFilesList() {
         {previewData && (
           <div
             ref={previewRef}
-            className="bg-white rounded-2xl shadow-xl p-8 mt-8"
+            className="bg-white dark:bg-[#101a33] rounded-2xl shadow-xl p-8 mt-8"
           >
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center space-x-4 space-x-reverse">
-                <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center ml-5">
+                <div className="w-10 h-10 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center">
                   <svg
-                    className="w-5 h-5 text-green-600"
+                    className="w-5 h-5 text-green-600 dark:text-green-300"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -562,10 +571,12 @@ export default function ExcelFilesList() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-800">
+                  <h3 className="text-xl font-bold text-gray-800 dark:text-white">
                     عرض البيانات
                   </h3>
-                  <p className="text-gray-600">{previewName}</p>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    {previewName}
+                  </p>
                 </div>
               </div>
               <button
@@ -573,7 +584,7 @@ export default function ExcelFilesList() {
                   setPreviewData(null);
                   setPreviewName("");
                 }}
-                className="text-gray-400 hover:text-gray-600 transition-colors"
+                className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors"
               >
                 <svg
                   className="w-6 h-6"
@@ -594,29 +605,29 @@ export default function ExcelFilesList() {
             <div className="overflow-x-auto">
               <div className="inline-block min-w-full align-middle">
                 <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 rounded-lg">
-                  <table className="min-w-full divide-y divide-gray-300">
-                    <thead className="bg-gray-50">
+                  <table className="min-w-full divide-y divide-gray-300 dark:divide-gray-700">
+                    <thead className="bg-gray-50 dark:bg-[#18213a]">
                       <tr>
                         {Object.keys(previewData[0] || {}).map((key) => (
                           <th
                             key={key}
-                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
+                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider"
                           >
                             {key}
                           </th>
                         ))}
                       </tr>
                     </thead>
-                    <tbody className="bg-white divide-y divide-gray-200">
+                    <tbody className="bg-white dark:bg-[#101a33] divide-y divide-gray-200 dark:divide-gray-800">
                       {previewData.map((row, i) => (
                         <tr
                           key={i}
-                          className="hover:bg-gray-50 transition-colors"
+                          className="hover:bg-gray-50 dark:hover:bg-[#18213a] transition-colors"
                         >
                           {Object.values(row).map((val, j) => (
                             <td
                               key={j}
-                              className="px-6 py-4 whitespace-nowrap text-sm text-gray-900"
+                              className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100"
                             >
                               {String(val)}
                             </td>
