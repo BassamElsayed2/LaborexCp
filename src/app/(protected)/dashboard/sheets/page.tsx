@@ -26,11 +26,33 @@ export default function ExcelFilesList() {
   const [search, setSearch] = useState("");
 
   // Share: open WhatsApp Web with file link, let user pick contact
-  const handleShare = (url: string) => {
-    const msg = encodeURIComponent(`رابط الملف: ${url}`);
+  const handleShare = (fileName: string) => {
+    const previewUrl = `${
+      window.location.origin
+    }/dashboard/sheets/view/${encodeURIComponent(fileName)}`;
+    const msg = encodeURIComponent(`رابط الملف للعرض فقط: ${previewUrl}`);
     const waUrl = `https://wa.me/?text=${msg}`;
     window.open(waUrl, "_blank");
-    toast.success("تم فتح واتساب، اختر جهة الاتصال وأرسل الرابط");
+    toast.custom((t) => (
+      <span className="flex flex-col items-start gap-2 bg-white dark:bg-gray-900 p-4 rounded shadow border border-gray-200 dark:border-gray-700">
+        <span className="text-sm text-gray-800 dark:text-gray-100 mb-1">
+          رابط العرض:
+        </span>
+        <span className="text-xs break-all text-blue-700 dark:text-blue-300 mb-2">
+          {previewUrl}
+        </span>
+        <button
+          onClick={() => {
+            navigator.clipboard.writeText(previewUrl);
+            toast.success("تم نسخ الرابط!");
+            toast.dismiss(t.id);
+          }}
+          className="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 text-xs"
+        >
+          نسخ الرابط
+        </button>
+      </span>
+    ));
   };
 
   const fetchFiles = async () => {
@@ -458,7 +480,7 @@ export default function ExcelFilesList() {
                         تحميل
                       </button>
                       <button
-                        onClick={() => handleShare(file.url)}
+                        onClick={() => handleShare(file.name)}
                         className="inline-flex items-center px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 dark:bg-yellow-700 dark:hover:bg-yellow-800 transition-colors ml-5"
                       >
                         <svg
