@@ -63,7 +63,6 @@ export default function SheetPreviewPage() {
       }
     };
     fetchAndPreview();
-    // eslint-disable-next-line
   }, [fileName]);
 
   return (
