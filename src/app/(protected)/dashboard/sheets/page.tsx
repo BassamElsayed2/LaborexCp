@@ -187,7 +187,7 @@ export default function ExcelFilesList() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-[#0c1427] dark:to-[#1a223a] py-8 px-4">
+    <div className="min-h-screen bg-[#f0f4ff] bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-[#0c1427] dark:to-[#1a223a] py-8 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="bg-white dark:bg-[#101a33] rounded-2xl shadow-xl p-8 mb-8">
@@ -219,7 +219,7 @@ export default function ExcelFilesList() {
             </div>
             <a
               href="/dashboard/sheets/uploadSheets/"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-xl shadow-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 dark:from-blue-800 dark:to-indigo-900 dark:hover:from-blue-900 dark:hover:to-indigo-950"
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-xl shadow-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 dark:bg-blue-800 dark:hover:bg-blue-900"
             >
               <svg
                 className="w-5 h-5 ml-2"
@@ -240,7 +240,7 @@ export default function ExcelFilesList() {
 
           {/* Stats Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-950 rounded-xl p-6 border border-blue-200 dark:border-blue-900">
+            <div className="bg-blue-50 dark:bg-blue-900 rounded-xl p-6 border border-blue-200 dark:border-blue-900">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-blue-600 dark:text-blue-300 font-medium">
@@ -268,7 +268,7 @@ export default function ExcelFilesList() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-green-50 to-green-100 dark:from-green-900 dark:to-green-950 rounded-xl p-6 border border-green-200 dark:border-green-900">
+            <div className="bg-green-50 dark:bg-green-900 rounded-xl p-6 border border-green-200 dark:border-green-900">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-green-600 dark:text-green-300 font-medium">
@@ -302,7 +302,7 @@ export default function ExcelFilesList() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-purple-50 to-purple-100 dark:from-purple-900 dark:to-purple-950 rounded-xl p-6 border border-purple-200 dark:border-purple-900">
+            <div className="bg-purple-50 dark:bg-purple-900 rounded-xl p-6 border border-purple-200 dark:border-purple-900">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-purple-600 dark:text-purple-300 font-medium">

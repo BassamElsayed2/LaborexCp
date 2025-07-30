@@ -20,7 +20,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Trezo - Tailwind Nextjs Admin Dashboard Templat",
+  title: "Laborex",
   description: "Tailwind Nextjs Admin Dashboard Templat",
 };
 

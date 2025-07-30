@@ -37,7 +37,7 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({ toggleActive }) => {
               height={26}
             />
             <span className="font-bold text-black dark:text-white relative ltr:ml-[8px] rtl:mr-[8px] top-px text-xl">
-              Trezo
+              ENS
             </span>
           </Link>
 
