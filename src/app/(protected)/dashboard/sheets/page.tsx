@@ -187,7 +187,7 @@ export default function ExcelFilesList() {
   );
 
   return (
-    <div className="min-h-screen bg-[#f0f4ff] bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-[#0c1427] dark:to-[#1a223a] py-8 px-4">
+    <div className="min-h-screen py-8 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="bg-white dark:bg-[#101a33] rounded-2xl shadow-xl p-8 mb-8">

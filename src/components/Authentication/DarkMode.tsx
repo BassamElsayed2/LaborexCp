@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 
 const DarkMode: React.FC = () => {
   // Light/Dark Mode
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
 
   useEffect(() => {
     // Retrieve the user's preference from local storage
